@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M4 Rifle Website</title>
+    <link rel="stylesheet" href="../styles/layout.css" />
+  </head>
+  <body>
+    <header>
+      <h1>M4 Rifle</h1>
+      <p>Your source for information on the M4 rifle.</p>
+    </header>
+
+    <div class="container">
+      <nav class="left-nav">
+        <h2>Navigation</h2>
+        <ul>
+          <!-- Note: data-link instead of href for SPA behavior -->
+          <li><a href="#" data-page="home">Home</a></li>
+          <li><a href="#" data-page="about">About</a></li>
+          <li><a href="#" data-page="gallery">Gallery</a></li>
+          <li><a href="#" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main content dynamically injected here -->
+      <main id="main-content">
+        <h2>Welcome to the M4 Rifle Website</h2>
+        <p>This is the home page. Click the links to navigate!</p>
+      </main>
+
+      <nav class="right-nav">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+          <a href="../images/image1.jpg"
+            ><img src="../images/thumbnail1.jpg" alt="M4 Rifle Image 1"
+          /></a>
+          <a href="../images/image2.jpg"
+            ><img src="../images/thumbnail2.jpg" alt="M4 Rifle Image 2"
+          /></a>
+          <a href="../images/image3.jpg"
+            ><img src="../images/thumbnail3.jpg" alt="M4 Rifle Image 3"
+          /></a>
+        </div>
+      </nav>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Teodor Ivanov | Contact: 123-456-7890</p>
+    </footer>
+
+    <script src="../scripts/layout.js"></script>
+  </body>
+</html>
