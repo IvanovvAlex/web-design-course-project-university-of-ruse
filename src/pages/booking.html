@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чернобил - Аварията</title>
+    <link rel="stylesheet" href="../styles/layout.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Аварията в Чернобил</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <!-- <li><a href="history.html">История</a></li> -->
+                <li><a href="gallery.html">Галерия</a></li>
+                <li><a href="booking.html">Резервирай тур</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-index">
+        <section style="display: flex; margin: 20px auto;">
+            <div>
+                <h2>Разходки в Припят</h2>
+                <form id="bookingForm">
+                    <label for="fname">Имена</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Твоите имена..">
+
+                    <label for="lname">Мейл</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Твоят мейл..">
+
+                    <label for="country">Брой хора</label>
+                    <select id="country" name="country">
+                        <option value="australia">1</option>
+                        <option value="canada">2</option>
+                        <option value="usa">3</option>
+                        <option value="usa">4</option>
+                        <option value="usa">5</option>
+                    </select>
+                    <label for="country">Избери дата</label>
+                    <input type="date">
+                    <input type="submit" value="Резервирай">
+                </form>
+            </div>
+            <img src="../images/reaktor.jpg" alt="Реактор 4 след експлозията" class="" style="margin: 50px;">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alex Ivanov | Contact: 123-456-7890</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let date = document.getElementById('date').value;
+            let people = document.getElementById('people').value;
+
+            if (name && email && date) {
+                alert(`Резервацията е направена!\nИме: ${name}\nEmail: ${email}\nДата: ${date}\nБрой хора: ${people}`);
+                this.reset();
+            } else {
+                alert('Моля, попълнете всички полета!');
+            }
+        });
+    </script>
+</body>
+
+</html>
