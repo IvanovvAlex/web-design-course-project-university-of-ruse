@@ -19,6 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
+        if (!validateEmail(email)) {
+          responseMsg.textContent = "Моля, въведете валиден имейл адрес.";
+          responseMsg.style.color = "red";
+          responseMsg.classList.remove("hidden");
+          return;
+        }
+
         responseMsg.textContent = "Благодарим ви! Ще се свържем с вас скоро.";
         responseMsg.style.color = "green";
         responseMsg.classList.remove("hidden");
@@ -32,3 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(contentContainer, { childList: true, subtree: true });
 });
+
+function validateEmail(email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}

@@ -12,91 +12,10 @@ body {
   color: #212529;
 }
 
-header {
-  background-color: #0d6efd;
-  padding: 1em 0;
-  text-align: center;
-}
-
-nav .nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  margin: 0;
-  padding: 0;
-}
-
-nav .nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav .nav-links li a:hover {
-  color: #dbe6ff;
-}
-
 main {
   max-width: 1000px;
   margin: auto;
   padding: 2em;
-}
-
-footer {
-  background-color: #f1f1f1;
-  text-align: center;
-  padding: 1em;
-  color: #6c757d;
-}
-
-/* Custom Bullets */
-.custom-bullets {
-  list-style: none;
-  padding-left: 0;
-}
-
-.custom-bullets li {
-  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Symbol_list_bullet_01.svg/20px-Symbol_list_bullet_01.svg.png")
-    no-repeat left center;
-  background-size: 18px;
-  padding-left: 30px;
-  margin: 0.5em 0;
-}
-
-/* Roman List */
-.roman-list {
-  list-style-type: upper-roman;
-  padding-left: 1.5em;
-}
-
-.roman-list li:nth-child(odd) {
-  font-style: italic;
-}
-
-/* Table Styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 2em;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-}
-
-th,
-td {
-  padding: 0.75em;
-  text-align: left;
-  border: 1px solid #dee2e6;
-}
-
-thead {
-  background-color: #0d6efd;
-  color: white;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #e9ecef;
 }
 
 /* Responsiveness */

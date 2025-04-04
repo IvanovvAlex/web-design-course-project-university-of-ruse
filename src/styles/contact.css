@@ -1,66 +1,80 @@
-.contact-container-wrapper {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  padding: 40px;
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
-.contact-container-wrapper .contact-container {
-  background-color: white;
+.contact-section {
+  background-color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
-.contact-container-wrapper h1 {
-  color: #333;
+#contact-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
 }
 
-.contact-container-wrapper p {
+.contact-description {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-form .form-group {
   margin-bottom: 20px;
-  color: #555;
 }
 
-.contact-container-wrapper .form-group {
-  margin-bottom: 20px;
-}
-
-.contact-container-wrapper label {
+.form-label {
   display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
 }
 
-.contact-container-wrapper input,
-.contact-container-wrapper textarea {
+.form-input {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fefefe;
+  transition: border 0.3s ease;
 }
 
-.contact-container-wrapper button {
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 14px 24px;
   font-size: 16px;
-  border-radius: 6px;
+  font-weight: 500;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact-container-wrapper button:hover {
+.submit-button:hover {
   background-color: #0056b3;
 }
 
-.contact-container-wrapper #responseMsg {
-  margin-top: 15px;
-  font-weight: bold;
+.form-response-message {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #007bff;
 }
 
-.contact-container-wrapper .hidden {
+.hidden {
   display: none;
 }

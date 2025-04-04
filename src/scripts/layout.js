@@ -1,18 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
 
+  includeHTML("partials/primaryNavigation.html", "nav-placeholder", () => {
+    setupPrimaryNav?.();
+  });
+  includeHTML("partials/footer.html", "footer-placeholder");
+
   loadPage("home");
 
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const page = link.dataset.page;
-      loadPage(page);
-    });
-  });
-
   function loadPage(pageName) {
-    fetch(`pages/${pageName}.html`)
+    fetch(`partials/${pageName}.html`)
       .then((res) => res.text())
       .then((html) => {
         content.innerHTML = html;
@@ -20,6 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => {
         content.innerHTML = "<p>Грешка при зареждане на съдържанието.</p>";
         console.error(err);
+      });
+  }
+
+  function includeHTML(file, elementId, callback) {
+    fetch(file)
+      .then((res) => res.text())
+      .then((html) => {
+        document.getElementById(elementId).innerHTML = html;
+        if (callback) callback();
+      })
+      .catch((err) => {
+        console.error(`Грешка при зареждане на ${file}`, err);
       });
   }
 });
