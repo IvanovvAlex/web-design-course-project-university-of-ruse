@@ -1,13 +1,8 @@
 .contact-section {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-.contact-section {
   background-color: #ffffff;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto auto;
+  margin-top: 5rem;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
