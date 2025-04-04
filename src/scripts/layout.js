@@ -1,18 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
 
-  includeHTML("partials/primaryNavigation.html", "nav-placeholder", () => {
+  includeHTML("components/primaryNavigation.html", "nav-placeholder", () => {
     setupPrimaryNav?.();
   });
-  includeHTML("partials/footer.html", "footer-placeholder");
+  includeHTML("components/footer.html", "footer-placeholder");
 
   loadPage("home");
 
   function loadPage(pageName) {
-    fetch(`partials/${pageName}.html`)
-      .then((res) => res.text())
-      .then((html) => {
-        content.innerHTML = html;
+    Promise.all([
+      fetch(`partials/contents/${pageName}Content.html`).then((res) =>
+        res.ok ? res.text() : Promise.reject("Content not found")
+      ),
+      fetch(`partials/navigations/${pageName}Navigation.html`)
+        .then((res) => {
+          if (res.ok) return res.text();
+          return null; // Navigation is optional
+        })
+        .catch(() => null),
+    ])
+      .then(([contentHTML, navHTML]) => {
+        const hasNav = navHTML !== null;
+
+        content.innerHTML = `
+        <div class="main-wrapper ${hasNav ? "with-nav" : "no-nav"}">
+          <div id="main-content">${contentHTML}</div>
+          ${hasNav ? `<aside id="side-nav">${navHTML}</aside>` : ""}
+        </div>
+      `;
       })
       .catch((err) => {
         content.innerHTML = "<p>Грешка при зареждане на съдържанието.</p>";

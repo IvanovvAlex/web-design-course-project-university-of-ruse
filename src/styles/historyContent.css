@@ -1,0 +1,22 @@
+.history-content-wrapper .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.history-content-wrapper .subsection-title {
+  font-size: 1.75rem;
+  color: #a11a1a;
+  margin-top: 2rem;
+}
+
+.history-content-wrapper .section-paragraph {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.history-content-wrapper .impact-list {
+  list-style: square inside;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}

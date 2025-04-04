@@ -13,9 +13,11 @@ body {
 }
 
 main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2em;
+  max-width: 100%;
+  padding-left: 4rem;
+}
+.main-wrapper {
+  display: flex;
 }
 
 /* Responsiveness */
