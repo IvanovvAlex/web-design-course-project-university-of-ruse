@@ -1,6 +1,48 @@
 .home-content {
-  padding-top: 3rem;
+  padding-top: 1rem;
   display: flex;
   gap: 2rem;
   padding-right: 5rem;
+  padding-bottom: 1rem;
+}
+.custom-bullets {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+.custom-bullets li {
+  background: url("https://www.shutterstock.com/shutterstock/photos/1473523988/display_1500/stock-vector-radiation-symbol-radiation-warning-sign-isolated-on-white-background-the-radiation-icon-vector-1473523988.jpg")
+    no-repeat left center;
+  background-size: 18px 18px;
+  padding-left: 28px;
+  margin-bottom: 10px;
+}
+
+.roman-list {
+  list-style-type: upper-roman;
+  padding-left: 1.5em;
+}
+
+.roman-list li:nth-child(odd) {
+  font-style: italic;
+  color: #99ff99;
+}
+
+.styled-table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px solid #33ff33;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #66ff66;
+  padding: 10px;
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #004400;
+  color: #aaffaa;
 }
